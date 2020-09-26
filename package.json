@@ -1,0 +1,29 @@
+{
+    "name": "visky",
+    "version": "1.0.0",
+    "description": "simple-nodejs-boilerplate",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/okandavut/visky.git"
+    },
+    "keywords": [
+        "visky"
+    ],
+    "author": "Okan DAVUT",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/okandavut/visky/issues"
+    },
+    "homepage": "https://github.com/okandavut/visky#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "helmet": "^4.1.0",
+        "morgan": "^1.10.0"
+    }
+}
