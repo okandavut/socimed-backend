@@ -1,24 +1,26 @@
-const express = require('express');
-const config = require('./config/config');
-var tempRouter = require('./routes/temproutes');
-const bodyParser = require('body-parser');
+const express = require("express");
+const config = require("./config/config");
+var userRouter = require("./routes/userRouter");
+const bodyParser = require("body-parser");
 const helmet = require("helmet");
-var morgan = require('morgan')
-
+var morgan = require("morgan");
+const mongoose = require("mongoose");
+var cors = require("cors");
 const app = express();
 
 app.use(helmet());
 
-app.use(async function(req, res, next) {
-    console.log("test visky middleware");
-    await next();
-});
+mongoose.connect(
+  "mongodb+srv://mrokt:123456**@cluster0-1xc2u.mongodb.net/socimed?retryWrites=true&w=majority",
+  { useNewUrlParser: true }
+);
 
 app.use(bodyParser.json());
 
-app.use(morgan('tiny'));
+app.use(morgan("tiny"));
 
-app.use(tempRouter);
+//User Routes
+app.use(userRouter);
 
 app.listen(config.port);
 

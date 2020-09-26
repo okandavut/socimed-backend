@@ -1,7 +1,7 @@
 {
-    "name": "visky",
+    "name": "socimed-backend",
     "version": "1.0.0",
-    "description": "simple-nodejs-boilerplate",
+    "description": "socimed-backend",
     "main": "src/index.js",
     "scripts": {
         "start": "node src/index.js",
@@ -22,8 +22,10 @@
     "homepage": "https://github.com/okandavut/visky#readme",
     "dependencies": {
         "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
         "express": "^4.17.1",
         "helmet": "^4.1.0",
+        "mongoose": "^5.10.7",
         "morgan": "^1.10.0"
     }
 }
