@@ -1,4 +1,4 @@
-<h2>Socimed Api </h2> 
+<h2 align="center">Socimed Api </h2> 
 
 ## Table of Contents
 
