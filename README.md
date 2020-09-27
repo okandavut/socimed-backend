@@ -1,14 +1,5 @@
 <h2 align="center">Socimed Api </h2> 
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies](#technologies)
-- [Feedback](#feedback)
-- [Build Process](#build-process)
-- [Contributors](#contributors)
-
 ### Introduction
 
 Socimed is simple social media. User can post text message and see all users posts and search posts by title. 
