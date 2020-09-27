@@ -33,6 +33,6 @@ If there's anything you'd like to chat about, please feel free send me dm on [Tw
 
 - Will be added.
 
-## Contributors
+### Contributors
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors).
