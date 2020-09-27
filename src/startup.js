@@ -1,6 +1,9 @@
 const express = require("express");
 const config = require("./config/config");
+
 var userRouter = require("./routes/userRouter");
+const postRouter = require("./routes/postRouter");
+
 const bodyParser = require("body-parser");
 const helmet = require("helmet");
 var morgan = require("morgan");
@@ -21,6 +24,7 @@ app.use(morgan("tiny"));
 
 //User Routes
 app.use(userRouter);
+app.use(postRouter);
 
 app.listen(config.port);
 
