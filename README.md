@@ -11,7 +11,7 @@
 
 ### Introduction
 
-Socimed is simple social media. User can post text message and see all users post messages.
+Socimed is simple social media. User can post text message and see all users posts and search posts by title. 
 
 ### Features
 
@@ -20,6 +20,7 @@ Socimed is simple social media. User can post text message and see all users pos
 - List all active posts
 - List user posts by user id
 - Delete post by id
+- Search posts by title
 
 ### Technologies
 

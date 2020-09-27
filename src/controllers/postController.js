@@ -26,23 +26,33 @@ function createPost(req, res) {
 }
 
 function getAllActivePosts(req, res) {
-  posts.find({ isActive: true }, function (error, requests) {
+  posts.find({ isActive: true }, function (error, posts) {
     if (error) throw error;
-    res.send(requests);
+    res.send(posts);
   });
 }
 
 function getAllPostByUser(req, res) {
-  posts.find({ postUserId: req.body.postUserId }, function (error, requests) {
+  posts.find({ postUserId: req.body.postUserId }, function (error, posts) {
     if (error) throw error;
-    res.send(requests);
+    res.send(posts);
   });
 }
 
 function deletePost(req, res) {
-  posts.findOneAndRemove({ _id: req.body.id }, function (error, requests) {
+  posts.findOneAndRemove({ _id: req.body.id }, function (error, posts) {
     if (error) throw error;
     res.send(true);
+  });
+}
+
+function searchPostByTitle(req, res) {
+  posts.find({ title: { $regex: req.body.title, $options: "i" } }, function (
+    error,
+    posts
+  ) {
+    if (error) throw error;
+    res.send(posts);
   });
 }
 
@@ -51,4 +61,5 @@ module.exports = {
   getAllActivePosts,
   getAllPostByUser,
   deletePost,
+  searchPostByTitle,
 };
