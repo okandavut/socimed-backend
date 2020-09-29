@@ -13,6 +13,7 @@ const usersSchema = new Schema({
 const users = (module.exports = mongoose.model("users", usersSchema));
 
 function login(req, res) {
+  console.log(req.body);
   users.find(
     { username: req.body.username, password: req.body.password },
     function (error, userItem) {

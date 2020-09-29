@@ -8,8 +8,9 @@ const bodyParser = require("body-parser");
 const helmet = require("helmet");
 var morgan = require("morgan");
 const mongoose = require("mongoose");
-var cors = require("cors");
+var cors = require('cors')
 const app = express();
+app.use(cors());
 
 app.use(helmet());
 
