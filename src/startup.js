@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const helmet = require("helmet");
 var morgan = require("morgan");
 const mongoose = require("mongoose");
-var cors = require('cors')
+var cors = require("cors");
 const app = express();
 app.use(cors());
 
@@ -27,6 +27,6 @@ app.use(morgan("tiny"));
 app.use(userRouter);
 app.use(postRouter);
 
-app.listen(config.port);
+app.listen(process.env.PORT || 3000);
 
 module.exports = { app };
