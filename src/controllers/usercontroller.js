@@ -32,4 +32,12 @@ function createUser(req, res) {
   });
 }
 
-module.exports = { login, createUser };
+function deleteUser(req, res) {
+  users.deleteOne({ name: req.body.name }, (err, request) => {
+    if (err) {
+      throw err;
+    }
+    res.send(true);
+  });
+}
+module.exports = { login, createUser,deleteUser };
