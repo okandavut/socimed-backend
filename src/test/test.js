@@ -42,3 +42,36 @@ describe("#userControllerTests", function () {
       });
   });
 });
+
+describe("#postControllerPosts", function () {
+  it("should createPost", (done) => {
+    chai
+      .request("http://localhost:3000")
+      .post("/createPost")
+      .send({
+        title: "Test",
+        post: "Test",
+        postUserId: "5f7570860e767e001101666f",
+      })
+      .end((err, res) => {
+        expect(res.body.title).equal("Test");
+        expect(res.status).equal(200);
+        rollBackCreatedPost(res.body._id);
+        done();
+      });
+  });
+});
+
+const rollBackCreatedPost = (id) => {
+  //Rollback inserted item
+  chai
+    .request("http://localhost:3000")
+    .post("/deletePost")
+    .send({
+      id: id,
+    })
+    .end((err, res) => {
+      expect(res.body).equal(true);
+      expect(res.status).equal(200);
+    });
+};
