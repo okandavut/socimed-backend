@@ -15,7 +15,26 @@ Socimed is simple social media. User can post text message and see all users pos
 
 ### Build Process
 
-- Will be added.
+- Install packages and run project
+```sh
+$ git clone https://github.com/okandavut/socimed-backend.git
+
+$ cd socimed-backend/
+
+$ npm install
+  
+$ npm start  
+```
+- Write and run test
+```sh
+
+$ npm run test
+```
+- Check coverage of project
+```sh
+
+$ npm run cover
+```
 
 ### Feedback
 
