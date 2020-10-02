@@ -1,10 +1,8 @@
 "use strict";
 
 var expect = require("chai").expect;
-var request = require("request");
 var chai = require("chai");
 var chaiHttp = require("chai-http");
-const axios = require("axios");
 var user_controller = require("../controllers/usercontroller");
 
 chai.use(chaiHttp);
