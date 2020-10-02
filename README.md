@@ -13,6 +13,17 @@ Socimed is simple social media. User can post text message and see all users pos
 - Delete post by id
 - Search posts by title
 
+### Build Process
+
+- Will be added.
+
+### Feedback
+
+Feel free to send me feedback on [Twitter](https://twitter.com/okandavutcom) or [file an issue](https://github.com/okandavut/socimed-backend/issues/new). Feature requests are always welcome.
+
+If there's anything you'd like to chat about, please feel free send me dm on [Twitter](https://twitter.com/okandavutcom)!
+
+
 ### Technologies
 
 - [NodeJS](https://nodejs.org/en/)
@@ -22,16 +33,6 @@ Socimed is simple social media. User can post text message and see all users pos
 - [Mongoose](https://www.npmjs.com/package/mongoose)
 - [Morgan](https://www.npmjs.com/package/morgan)
 - [Cors](https://www.npmjs.com/package/cors)
-
-### Feedback
-
-Feel free to send me feedback on [Twitter](https://twitter.com/okandavutcom) or [file an issue](https://github.com/okandavut/socimed-backend/issues/new). Feature requests are always welcome.
-
-If there's anything you'd like to chat about, please feel free send me dm on [Twitter](https://twitter.com/okandavutcom)!
-
-### Build Process
-
-- Will be added.
 
 ### Contributors
 
