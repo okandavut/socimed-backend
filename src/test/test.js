@@ -60,6 +60,45 @@ describe("#postControllerPosts", function () {
         done();
       });
   });
+
+  it("should get all active post", (done) => {
+    chai
+      .request("http://localhost:3000")
+      .get("/getAllActivePosts")
+      .end((err, res) => {
+        expect(res.body.length).greaterThan(0);
+        expect(res.status).equal(200);
+        done();
+      });
+  });
+
+  it("should get all posts by user", (done) => {
+    chai
+      .request("http://localhost:3000")
+      .get("/getAllPostByUser")
+      .send({
+        postUserId: "5f70c2ca026a6744c0959a04",
+      })
+      .end((err, res) => {
+        expect(res.body.length).greaterThan(0);
+        expect(res.status).equal(200);
+        done();
+      });
+  });
+
+  it("should get posts by title", (done) => {
+    chai
+      .request("http://localhost:3000")
+      .get("/searchPostByTitle")
+      .send({
+        title: "davut",
+      })
+      .end((err, res) => {
+        expect(res.body.length).greaterThan(0);
+        expect(res.status).equal(200);
+        done();
+      });
+  });
 });
 
 const rollBackCreatedPost = (id) => {
